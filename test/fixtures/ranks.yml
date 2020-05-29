@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  current_rank: 1
+  last_week: 1
+  total_weeks: 1
+
+two:
+  current_rank: 1
+  last_week: 1
+  total_weeks: 1
