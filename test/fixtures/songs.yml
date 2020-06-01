@@ -3,7 +3,9 @@
 one:
   name: MyString
   duration: 1
+  artist: one
 
 two:
   name: MyString
   duration: 1
+  artist: two
