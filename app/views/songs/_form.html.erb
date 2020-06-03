@@ -1,0 +1,10 @@
+<h1><%= @song.id ? 'Edit song' : 'Create Song' %> </h1>
+
+<%= form_for @song do |f| %>
+  # form helper for rails
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  # does front-end validation
+  
+  <%= f.submit %>
+<% end %>

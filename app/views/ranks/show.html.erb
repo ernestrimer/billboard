@@ -1,2 +1,10 @@
-<h1>Ranks#show</h1>
-<p>Find me in app/views/ranks/show.html.erb</p>
+<h1><%= @rank.name %></h1>
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View all Ranks', ranks_path %>
+<br />
+<%= link_to 'View Artists', rank_artists_path(@rank) %>
+<br />
+<%= link_to 'Edit Rank', edit_rank_path(@rank) %>
+<br />
+<%= link_to 'Delete Rank', @rank, method: :delete %>
