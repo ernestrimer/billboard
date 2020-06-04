@@ -1,13 +1,6 @@
-<h1><%= @song.name %></h1>
-<hr >
-<h2>Ranks</h2>
-<ul>
-  <% @artist.artist.each do |artist| %>
-    <li>
-      <%= link_to artist.name, artist %>
-      # shows all the songs the artist has
-    </li>
-  <% end %>
-</ul>
-<br />
-<%= link_to 'Delete Song', @artist, method: :delete%>
+<h1><%= @artist.name %>: <%= @song.name %></h1>
+<%= link_to 'Edit Song', edit_artist_song_path([@artist, @song]) %>
+<br/>
+<%= link_to 'Delete Song', [@artist, @song], method: :delete %>
+<br/>
+<%= link_to 'Back to Artists', rank_artists_path(@rank) %>
