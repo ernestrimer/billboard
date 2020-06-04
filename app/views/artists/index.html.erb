@@ -1,2 +1,9 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<h1><%= @rank.current_rank %> Artists</h1>
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, [@rank, artist] %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Create New Artist', new_rank_artist_path(@rank) %>

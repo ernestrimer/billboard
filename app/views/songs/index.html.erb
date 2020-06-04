@@ -3,10 +3,10 @@
 <ul>
   <%= @songs.each do |song| %>
     <li>
-      <%= link_to song.name, [@rank, song]
+      <%= link_to song.name, [@artist, song]
     </li>
 
   <% end %>
 </ul>
 
-<%= link_to 'Add new song', new_rank_song_path(@rank) %>
+<%= link_to 'Add New Song', new_artist_song_path(@artist) %>

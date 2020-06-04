@@ -1,2 +1,9 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<h1><%= @rank.current_rank %>: <%= @artist.name %></h1>
+<h2><%= @artist.genre %></h2>
+<%= link_to 'Edit Artist', edit_rank_artist_path([@rank, @artist]) %>
+<br/>
+<%= link_to 'Delete Artist', [@rank, @artist], method: :delete %>
+<br/>
+<%= link_to 'Back to Artists', rank_artists_path(@rank) %>
+<br/>
+<%= link_to 'View Songs', artist_songs_path(@artist) %>

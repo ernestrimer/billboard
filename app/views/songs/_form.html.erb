@@ -8,3 +8,15 @@
   
   <%= f.submit %>
 <% end %>
+
+<h1><%= @song.id ? "Edit Artist" : "Create Artist" %></h1>
+<hr />
+<%= form_for [@rank, @artist] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <%= f.label :genre%>
+  <%= f.text_field :genre, required: true %>
+  
+  <%= f.submit %>
+<% end %>

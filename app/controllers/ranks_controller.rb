@@ -1,5 +1,6 @@
 class RanksController < ApplicationController
-  before_action :set_rank, only: [:show, :edit, :update, :destroy]
+  before_action :set_rank, only: [:show, :update, :edit, :destroy]
+
   
   def index
     @ranks = Rank.all 
@@ -51,6 +52,7 @@ class RanksController < ApplicationController
     def rank_params
       params.require(:rank).permit(:current_rank, :last_week, :total_weeks)
     end
+
     def set_rank
       @rank = Rank.find(params[:id])
     end

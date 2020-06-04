@@ -22,7 +22,7 @@ class ArtistsController < ApplicationController
     if @artist.save
       redirect_to [@rank, @artist]
     else
-      render: new
+      render :new
     end
   end
 
