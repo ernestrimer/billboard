@@ -1,10 +1,10 @@
 <h1> Ranks </h1>
 
 <ul>
-  <% @ranks.each do |sub| %>
+  <% @ranks.each do |rank| %>
     <li>
-      <%= link_to rank.name, rank %>
+      <%= link_to rank.current_rank, ranks_path %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'New Rank', new_rank_path %>
+<%= link_to 'New Rank', new_ranks_path %>

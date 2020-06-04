@@ -1,0 +1,13 @@
+<h1><%= @rank.id ? 'Edit Rank' : 'Create Rank' %> </h1>
+<%= form_for @rank do |f| %>
+  <%= f.label :current_rank %>
+  <%= f.text_field :current_rank, required: true %>
+
+  <%= f.label :last_week %>
+  <%= f.text_field :last_week, required: true %>
+  
+  <%= f.label :total_weeks %>
+  <%= f.text_field :total_weeks, required: true %>
+
+  <%= f.submit %>
+<% end %>

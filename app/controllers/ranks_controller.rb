@@ -1,5 +1,5 @@
 class RanksController < ApplicationController
-  # before_action :set_rank, only: [:show, :edit, :update, :destroy]
+  before_action :set_rank, only: [:show, :edit, :update, :destroy]
   
   def index
     @ranks = Rank.all 
@@ -7,7 +7,7 @@ class RanksController < ApplicationController
   end
 
   def show
-    @rank = Rank.find(params[:id])
+    # @rank = Rank.find(params[:id])
     # render show.html.erb
   end
 
@@ -18,7 +18,7 @@ class RanksController < ApplicationController
   end
 
   def edit
-    @rank = Rank.find(params[:id])
+    # @rank = Rank.find(params[:id])
     # render edit.html.erb edit form
     render partial: 'form'
   end
@@ -33,7 +33,7 @@ class RanksController < ApplicationController
   end
 
   def update
-    @rank = Rank.find(params[:id])
+    # @rank = Rank.find(params[:id])
     if @rank.update(rank_params)
       redirect_to ranks_path
     else
@@ -42,7 +42,7 @@ class RanksController < ApplicationController
   end
 
   def destroy
-    @rank = Rank.find(params[:id])
+    # @rank = Rank.find(params[:id])
     @rank.destroy
     redirect_to ranks_path
   end
@@ -51,8 +51,8 @@ class RanksController < ApplicationController
     def rank_params
       params.require(:rank).permit(:current_rank, :last_week, :total_weeks)
     end
-    # def set_rank
-    #   @rank = Rank.find(params[:id])
-    # end
+    def set_rank
+      @rank = Rank.find(params[:id])
+    end
 
 end
